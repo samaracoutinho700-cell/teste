@@ -21,16 +21,6 @@ try {
     if ( $linha = $stmt->fetch() ) {
         //restante do código...
 
-
-// Consulta SQL insegura
-$sql = "SELECT * FROM aluno WHERE cpf = '$cpf' AND senha = '$senha'";
-
-try {
-    // Executando a consulta
-    $resultado = $conexao->query($sql);
-
-    if ( $linha = $resultado->fetch() ) { // fetch() retorna false se não tiver linhas
-        echo "Login bem-sucedido!";
     } else {
         echo "CPF ou senha incorretos.";
     }
