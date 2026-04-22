@@ -12,7 +12,6 @@ $sql = "SELECT * FROM aluno
 
 try {
     $stmt = $conexao->prepare($sql);
-
     $stmt->bindParam(':cpf', $cpf);
     $stmt->bindParam(':senha', $senha);
 
